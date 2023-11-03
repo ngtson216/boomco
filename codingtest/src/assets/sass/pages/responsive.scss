@@ -1,0 +1,41 @@
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.input-add {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 10px 10px 9px 10px;
+    font-size: 16px;
+}
+
+.button-add {
+    padding: 10px;
+    background: #d9d9d9;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.button-add:hover {
+    background-color: #bbb;
+}

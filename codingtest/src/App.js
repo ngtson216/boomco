@@ -3,13 +3,13 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 import ROUTER from './routes';
-import Home from './screens/Home';
+import AppLayout from './screens/Layout';
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path={ROUTER.INDEX} element={<Home />} />
+        <Route path={ROUTER.INDEX} element={<AppLayout />} />
       </Routes>
     </div>
   );

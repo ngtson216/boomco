@@ -6,7 +6,7 @@ import HomePage from "./HomePage";
 const Home = () => {
     return (
         <Routes>
-            <Route path={ROUTER.INDEX} element={<HomePage />} />
+            <Route path={ROUTER.HOME} element={<HomePage />} />
         </Routes>
     )
 }
