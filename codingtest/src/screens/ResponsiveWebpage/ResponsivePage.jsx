@@ -10,7 +10,7 @@ const ResponsivePage = (props) => {
             <div className="wrapper-div-resp">
                 <div className="avatar-div">
                     <div className="avatar">
-                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt=""></img>
+                        <img src="https://i.pravatar.cc" alt=""></img>
                         <div className="text-under-ava">
                             <p className="text-p">chaemining</p>
                             <span className="text-span">le your content live longer the feed</span>
