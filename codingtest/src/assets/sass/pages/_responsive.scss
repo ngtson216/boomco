@@ -1,0 +1,126 @@
+.avatar-div {
+    height: 200px;
+    background-color: rgb(106, 42, 189);
+}
+
+.social-div {
+    padding-top: 20px;
+    height: 300px;
+    background-color: rgb(243, 243, 243);
+
+    .center-div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.separator {
+    width: 0;
+    height: 0;
+    border-left: 500px solid transparent;
+    border-bottom: 160px solid rgb(243, 243, 243);
+    margin-top: -190px
+}
+
+.wrapper-div-resp {
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid #c2c4a6;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+
+    img {
+        width: 70px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        border: none;
+        top: 45px;
+        left: 200px
+    }
+
+    .text-under-ava {
+        position: absolute;
+        width: fit-content;
+        top: 95px;
+        left: 120px;
+        text-align: center;
+    }
+
+    .text-p {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .text-span {
+        color: rgb(168, 168, 168);
+    }
+}
+
+
+
+.div-wraper-icon {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    text-align: left;
+    margin-left: 110px;
+    margin-bottom: 10px;
+
+    .wraper-icon {
+        display: flex;
+        justify-content: center;
+
+        .fb-icon {
+            color: rgb(5, 5, 155) !important;
+        }
+
+        .yt-icon {
+            color: rgb(212, 25, 11) !important;
+        }
+
+        .tw-icon {
+            color: rgb(11, 132, 212) !important;
+        }
+
+        .ig-icon {
+            color: rgb(212, 74, 159) !important;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .wraper-text {
+        margin: 3px 10px 0 10px;
+
+        .texp-icon-p {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 -5px 0;
+        }
+
+        .text-icon-span {
+            color: rgb(168, 168, 168);
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: antiquewhite;
+    height: 100vh;
+}

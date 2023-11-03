@@ -1,65 +1,66 @@
-import React, { useEffect, useState } from "react";
-import { connect } from 'react-redux';
-import select from '../../utils/select';
-import { addTodo, delTodo, getListTodo } from "./redux/action";
-import toJs from '../../hoc/ToJS';
+import React from "react";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const ResponsivePage = (props) => {
-    const [title, setTitle] = useState(undefined);
-
-    useEffect(() => {
-        props.getListTodo("son");
-        setTitle('')
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.success])
-
     return (
-        <div>
-            <div className="header">
-                <h2>My To Do List</h2>
-                <div className="wrapper">
-                    <input className="input-add" type="text" placeholder="Title..." value={title} onChange={(e) => {
-                        setTitle(e.target.value)
-                    }}></input>
-                    <span className="button-add" onClick={() => {
-                        const payload = {
-                            name: "son",
-                            title: title
-                        }
-                        props.addTodo(payload)
-                    }}>Add</span>
+        <div className="container">
+            <div className="wrapper-div-resp">
+                <div className="avatar-div">
+                    <div className="avatar">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt=""></img>
+                        <div className="text-under-ava">
+                            <p className="text-p">chaemining</p>
+                            <span className="text-span">le your content live longer the feed</span>
+                        </div>
+                    </div>
+
                 </div>
-            </div >
-            <ul>
-                {props.listTodo.map((item, index) => {
-                    return (
-                        <li key={`li ${index}`} onClick={(e) => {
-                            e.target.classList.toggle('checked')
-                        }}>{item.title} <span className="close" onClick={() => {
-                            const payload = {
-                                name: "son",
-                                id: item.id
-                            }
-                            props.delTodo(payload)
-                        }}>x</span></li>
-                    )
-                })}
-            </ul>
+                <div className="separator"></div>
+                <div className="social-div">
+                    <div className="center-div">
+                        <div className="div-wraper-icon">
+                            <div className="wraper-icon">
+                                <FacebookIcon className="fb-icon icon" />
+                            </div>
+                            <div className="wraper-text">
+                                <p className="texp-icon-p">채미닝의 페이스북</p>
+                                <span className="text-icon-span">https://www.facebook.com/test</span>
+                            </div>
+                        </div>
+                        <div className="div-wraper-icon">
+                            <div className="wraper-icon">
+                                <TwitterIcon className="tw-icon icon" />
+                            </div>
+                            <div className="wraper-text">
+                                <p className="texp-icon-p">채미닝의 트위터 채                                </p>
+                                <span className="text-icon-span">https://www.twitter.com/test</span>
+                            </div>
+                        </div>
+                        <div className="div-wraper-icon">
+                            <div className="wraper-icon">
+                                <YouTubeIcon className="yt-icon icon" />
+                            </div>
+                            <div className="wraper-text">
+                                <p className="texp-icon-p">미닝의 유투브 채미</p>
+                                <span className="text-icon-span">https://www.youtube.com/test</span>
+                            </div>
+                        </div>
+                        <div className="div-wraper-icon">
+                            <div className="wraper-icon">
+                                <InstagramIcon className="ig-icon icon" />
+                            </div>
+                            <div className="wraper-text">
+                                <p className="texp-icon-p">닝의 인스타그램</p>
+                                <span className="text-icon-span">https://www.instagram.com/test</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
-function mapStateToProps(state) {
-    return {
-        listTodo: select(state, 'respPageReducer', 'listTodo'),
-        success: select(state, 'respPageReducer', 'success'),
-    };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        getListTodo: (paramrs) => dispatch(getListTodo(paramrs)),
-        addTodo: (paramrs) => dispatch(addTodo(paramrs)),
-        delTodo: (paramrs) => dispatch(delTodo(paramrs)),
-    };
-}
-export default connect(mapStateToProps, mapDispatchToProps)(toJs(ResponsivePage));
+export default ResponsivePage;
